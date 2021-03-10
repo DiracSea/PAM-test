@@ -313,11 +313,12 @@ void rand(size_t *A, size_t n)
 par *rand_input(size_t n, size_t *key)
 {
     par *v = new par[n];
-    parallel_for(0, n, [&](size_t i) {
+    parallel_for(size_t i = 0; i < n; i++) 
+    {
         key_type k = key[i];
         key_type c = i; //r_keys(get_rand_gen());
         v[i] = make_pair(k, c);
-    });
+    }
     return v;
 }
 
