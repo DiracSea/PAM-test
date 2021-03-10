@@ -325,7 +325,7 @@ par *rand_input(size_t n, size_t *key)
 int main(int argc, char *argv[])
 {
 
-    int d = atoi(argv[1]);
+    int d = atoi(argv[1]); // 0-8 10
     size_t n = 10000000, m = 100000000;
     size_t *A = new size_t[n];
     size_t *B = new size_t[m];
