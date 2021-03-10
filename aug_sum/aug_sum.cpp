@@ -383,50 +383,52 @@ int main (int argc, char *argv[]) {
     cout << "set:" << endl;
 
     tmap m1, m4;
-    if (d > 2 && d < 10) {
-        tmap m2(v1, v1+m);
-        tmap m3(v2, v2+m);
-    }
     timer t,t1,t2;
     switch(d) {
         case 0:
         case 1:
         case 2:
-        t.start();
-        for (size_t i = 0; i < n; i++) m1.insert(v1[i]);
-        t.stop();
-        cout << "insert:" << t.get_total() << endl;
-        t1.start();
-        for (size_t i = 0; i < n; i++) m1 = tmap::remove(move(m1), v2[i].first);
-        t1.stop();
-        cout << "delete:" << t1.get_total() << endl;
+            t.start();
+            for (size_t i = 0; i < n; i++) m1.insert(v1[i]);
+            t.stop();
+            cout << "insert:" << t.get_total() << endl;
+            t1.start();
+            for (size_t i = 0; i < n; i++) m1 = tmap::remove(move(m1), v2[i].first);
+            t1.stop();
+            cout << "delete:" << t1.get_total() << endl;
         break;
         case 3:
         case 8:
-        t2.start();
-        m4 = tmap::map_union((tmap)m2, (tmap)m3);
-        t2.stop();
-        cout << "set-set time:" << t2.get_total() << endl;
-        break;
+            tmap m2(v1, v1+m);
+            tmap m3(v2, v2+m);
+            t2.start();
+            m4 = tmap::map_union((tmap)m2, (tmap)m3);
+            t2.stop();
+            cout << "set-set time:" << t2.get_total() << endl;
+            break;
         case 4:
         case 5:
-        t2.start();
-        m4 = tmap::map_intersect((tmap)m2, (tmap)m3);
-        t2.stop();
-        cout << "set-set time:" << t2.get_total() << endl;
-        break;
+            tmap m2(v1, v1+m);
+            tmap m3(v2, v2+m);
+            t2.start();
+            m4 = tmap::map_intersect((tmap)m2, (tmap)m3);
+            t2.stop();
+            cout << "set-set time:" << t2.get_total() << endl;
+            break;
         case 6:
         case 7:
-        t2.start();
-        m4 = tmap::map_difference((tmap)m2, (tmap)m3);
-        t2.stop();
-        cout << "set-set time:" << t2.get_total() << endl;
+            tmap m2(v1, v1+m);
+            tmap m3(v2, v2+m);
+            t2.start();
+            m4 = tmap::map_difference((tmap)m2, (tmap)m3);
+            t2.stop();
+            cout << "set-set time:" << t2.get_total() << endl;
         break;
         case 10:
-        t2.start();
-        tmap m5(v1, v1+n);
-        t2.stop();
-        cout << "build time:" << t2.get_total() << endl;
+            t2.start();
+            tmap m5(v1, v1+n);
+            t2.stop();
+            cout << "build time:" << t2.get_total() << endl;
         break;
         default:
         return 0;
