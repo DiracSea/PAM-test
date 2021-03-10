@@ -311,6 +311,9 @@ int main (int argc, char *argv[]) {
     size_t *B = new size_t[m];
     size_t *C = new size_t[m];
     par *v1, *v2;
+    for (size_t i = 0; i < n; i++) A[i] = i+1;
+    v1 = rand_input(n, A);
+    v2 = rand_input(n, A);
 
     switch(d) {
     case 0:// sorted
@@ -423,13 +426,13 @@ int main (int argc, char *argv[]) {
             m4 = tmap::map_difference((tmap)m2, (tmap)m3);
             t2.stop();
             cout << "set-set time:" << t2.get_total() << endl;
-        break;
+            break;
         case 10:
             t2.start();
             tmap m5(v1, v1+n);
             t2.stop();
             cout << "build time:" << t2.get_total() << endl;
-        break;
+            break;
         default:
         return 0;
     }
