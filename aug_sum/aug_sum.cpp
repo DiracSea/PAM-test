@@ -324,8 +324,8 @@ par *rand_input(size_t n, size_t *key)
 
 int main(int argc, char *argv[])
 {
-    int c = atoi(argv[1]);
-    int d = atoi(argv[2]);
+
+    int d = atoi(argv[1]);
     size_t n = 10000000, m = 100000000;
     size_t *A = new size_t[n];
     size_t *B = new size_t[m];
@@ -422,7 +422,7 @@ int main(int argc, char *argv[])
         v2 = rand_input(m, C);
         return 0;
     }
-    cout << "set:" << endl;
+    cout << "augment tree:" << endl;
 
     tmap m1, m4;
     timer t, t1, t2;
