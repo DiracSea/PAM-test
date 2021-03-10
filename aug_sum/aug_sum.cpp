@@ -311,9 +311,6 @@ int main (int argc, char *argv[]) {
     size_t *B = new size_t[m];
     size_t *C = new size_t[m];
     par *v1, *v2;
-    for (size_t i = 0; i < n; i++) A[i] = i+1;
-    v1 = rand_input(n, A);
-    v2 = rand_input(n, A);
 
     switch(d) {
     case 0:// sorted
@@ -381,6 +378,10 @@ int main (int argc, char *argv[]) {
         v2 = rand_input(m, C);
         break;
     default:
+        for (size_t i = 0; i < m; i++) B[i] = i+1;
+        for (size_t i = 0; i < m; i++) C[i] = i+1;
+        v1 = rand_input(m, B);
+        v2 = rand_input(m, C);
         return 0;
     }
     cout << "set:" << endl;
