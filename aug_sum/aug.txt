@@ -1,0 +1,204 @@
+sorted:
+augment tree:
+insert:5.52806
+delete:14.0992
+sorted:
+augment tree:
+insert:5.63001
+delete:14.2957
+reversed:
+augment tree:
+insert:5.42251
+delete:14.5494
+reversed:
+augment tree:
+insert:5.45429
+delete:14.5044
+rand:
+augment tree:
+insert:13.0323
+delete:14.8507
+rand:
+augment tree:
+insert:13.0331
+delete:14.8458
+union:
+augment tree:
+set-set time:14.852
+union:
+augment tree:
+set-set time:14.6137
+union half:
+augment tree:
+set-set time:5.87961
+union half:
+augment tree:
+set-set time:5.99973
+intersect half:
+augment tree:
+set-set time:6.00656
+intersect half:
+augment tree:
+set-set time:5.77755
+intersect:
+augment tree:
+set-set time:8.79579
+intersect:
+augment tree:
+set-set time:9.11085
+difference half:
+augment tree:
+set-set time:4.51871
+difference half:
+augment tree:
+set-set time:4.72768
+difference:
+augment tree:
+set-set time:6.82738
+difference:
+augment tree:
+set-set time:6.86092
+union:
+augment tree:
+set-set time:8.05063
+union:
+augment tree:
+set-set time:7.87038
+union half:
+augment tree:
+set-set time:3.24641
+union half:
+augment tree:
+set-set time:3.20881
+intersect half:
+augment tree:
+set-set time:3.0133
+intersect half:
+augment tree:
+set-set time:3.11838
+intersect:
+augment tree:
+set-set time:4.49889
+intersect:
+augment tree:
+set-set time:4.50122
+difference half:
+augment tree:
+set-set time:2.28566
+difference half:
+augment tree:
+set-set time:2.36015
+difference:
+augment tree:
+set-set time:3.42805
+difference:
+augment tree:
+set-set time:3.58278
+union:
+augment tree:
+set-set time:4.02636
+union:
+augment tree:
+set-set time:4.08312
+union half:
+augment tree:
+set-set time:1.70167
+union half:
+augment tree:
+set-set time:1.71372
+intersect half:
+augment tree:
+set-set time:1.77502
+intersect half:
+augment tree:
+set-set time:1.69321
+intersect:
+augment tree:
+set-set time:2.61179
+intersect:
+augment tree:
+set-set time:2.52719
+difference half:
+augment tree:
+set-set time:1.25542
+difference half:
+augment tree:
+set-set time:1.20257
+difference:
+augment tree:
+set-set time:1.82619
+difference:
+augment tree:
+set-set time:1.76588
+union:
+augment tree:
+set-set time:2.13385
+union:
+augment tree:
+set-set time:2.13649
+union half:
+augment tree:
+set-set time:0.893834
+union half:
+augment tree:
+set-set time:0.873839
+intersect half:
+augment tree:
+set-set time:0.887975
+intersect half:
+augment tree:
+set-set time:0.87452
+intersect:
+augment tree:
+set-set time:1.32486
+intersect:
+augment tree:
+set-set time:1.34213
+difference half:
+augment tree:
+set-set time:0.642849
+difference half:
+augment tree:
+set-set time:0.673944
+difference:
+augment tree:
+set-set time:0.965261
+difference:
+augment tree:
+set-set time:0.908403
+union:
+augment tree:
+set-set time:1.46848
+union:
+augment tree:
+set-set time:1.45608
+union half:
+augment tree:
+set-set time:0.587059
+union half:
+augment tree:
+set-set time:0.582832
+intersect half:
+augment tree:
+set-set time:1.41628
+intersect half:
+augment tree:
+set-set time:0.632005
+intersect:
+augment tree:
+set-set time:0.88669
+intersect:
+augment tree:
+set-set time:0.857562
+difference half:
+augment tree:
+set-set time:0.446889
+difference half:
+augment tree:
+set-set time:0.436605
+difference:
+augment tree:
+set-set time:0.601653
+difference:
+augment tree:
+set-set time:0.608659
