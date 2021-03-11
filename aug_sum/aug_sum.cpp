@@ -326,10 +326,12 @@ int main(int argc, char *argv[])
 {
 
     int d = atoi(argv[1]); // 0-8 10
-    size_t n = 10000000, m = 100000000;
+    int e = atoi(argv[1]);
+    size_t n = 10000000, m = 100000000, mm = m/e;
     size_t *A = new size_t[n];
     size_t *B = new size_t[m];
     size_t *C = new size_t[m];
+    size_t *D = new size_t[mm];
     par *v1, *v2;
 
     switch (d)
@@ -339,7 +341,6 @@ int main(int argc, char *argv[])
         for (size_t i = 0; i < n; i++)
             A[i] = i + 1;
         v1 = rand_input(n, A);
-        rand(A, n);
         v2 = rand_input(n, A);
         break;
     case 1: // reversed
@@ -347,7 +348,6 @@ int main(int argc, char *argv[])
         for (size_t i = 0; i < n; i++)
             A[i] = n - i;
         v1 = rand_input(n, A);
-        rand(A, n);
         v2 = rand_input(n, A);
         break;
     case 2: // rand
@@ -377,6 +377,32 @@ int main(int argc, char *argv[])
         v1 = rand_input(m, B);
         v2 = rand_input(m, C);
         break;
+    case 32: // union half
+        cout << "union small:" << endl;
+        for (size_t i = 0; i < m; i++)
+            B[i] = i + 1;
+        for (size_t i = 0; i < mm; i++)
+            C[i] = i + 1;
+        v1 = rand_input(m, B);
+        v2 = rand_input(mm, C);
+    case 31: // union half
+        cout << "union full:" << endl;
+        for (size_t i = 0; i < m; i++)
+            B[i] = i + 1;
+        for (size_t i = 0; i < m; i++)
+            C[i] = i + 1;
+        v1 = rand_input(m, B);
+        v2 = rand_input(m, C);
+        break;
+    case 41: // intersect 0
+        cout << "intersect 0:" << endl;
+        for (size_t i = 0; i < m; i++)
+            B[i] = 2 * i;
+        for (size_t i = 0; i < m; i++)
+            C[i] = 2 * i + 1;
+        v1 = rand_input(m, B);
+        v2 = rand_input(m, C);
+        break;
     case 4: // intersect 1/2
         cout << "intersect half:" << endl;
         for (size_t i = 0; i < m; i++)
@@ -392,6 +418,15 @@ int main(int argc, char *argv[])
             B[i] = i + 1;
         for (size_t i = 0; i < m; i++)
             C[i] = i + 1;
+        v1 = rand_input(m, B);
+        v2 = rand_input(m, C);
+        break;
+    case 61: // difference 1/2
+        cout << "difference 0:" << endl;
+        for (size_t i = 0; i < m; i++)
+            B[i] = 2*i;
+        for (size_t i = 0; i < m; i++)
+            C[i] = 2*i + 1;
         v1 = rand_input(m, B);
         v2 = rand_input(m, C);
         break;
@@ -422,8 +457,7 @@ int main(int argc, char *argv[])
         v2 = rand_input(m, C);
         return 0;
     }
-    cout << "augment tree:" << endl;
-
+    cout << "threads:"<<  num_workers() <<endl;
     tmap m1, m4;
     timer t, t1, t2;
     switch (d)
@@ -483,6 +517,16 @@ int main(int argc, char *argv[])
         tmap m5(v1, v1 + n);
         t2.stop();
         cout << "build time:" << t2.get_total() << endl;
+        break;
+    }
+    case 32:
+    {
+        tmap m2(v1, v1 + m);
+        tmap m3(v2, v2 + mm);
+        t2.start();
+        m4 = tmap::map_union((tmap)m2, (tmap)m3);
+        t2.stop();
+        cout << "small time:" << t2.get_total() << endl;
         break;
     }
     default:
