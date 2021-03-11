@@ -479,6 +479,7 @@ int main(int argc, char *argv[])
     }
     case 3:
     case 8:
+    case 31:
     {
         tmap m2(v1, v1 + m);
         tmap m3(v2, v2 + m);
@@ -490,6 +491,7 @@ int main(int argc, char *argv[])
     }
     case 4:
     case 5:
+    case 41:
     {
         tmap m2(v1, v1 + m);
         tmap m3(v2, v2 + m);
@@ -501,6 +503,7 @@ int main(int argc, char *argv[])
     }
     case 6:
     case 7:
+    case 61:
     {
         tmap m2(v1, v1 + m);
         tmap m3(v2, v2 + m);

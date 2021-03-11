@@ -203,32 +203,3 @@ difference:
 augment tree:
 set-set time:0.608659
 
-
-reversed:
-insert:5.48449
-delete:3.54564
-union full:
-union small:
-union full:
-small time:0.405489
-union small:
-union full:
-small time:0.253811
-union small:
-union full:
-small time:0.270101
-union:
-set-set time:1.30347
-union half:
-set-set time:0.580442
-union full:
-intersect 0:
-intersect half:
-set-set time:0.534421
-intersect:
-set-set time:0.793087
-difference 0:
-difference half:
-set-set time:0.383594
-difference:
-set-set time:0.477919
