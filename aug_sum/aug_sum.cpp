@@ -326,7 +326,7 @@ int main(int argc, char *argv[])
 {
 
     int d = atoi(argv[1]); // 0-8 10
-    int e = atoi(argv[1]);
+    int e = atoi(argv[2]);
     size_t n = 10000000, m = 100000000, mm = m/e;
     size_t *A = new size_t[n];
     size_t *B = new size_t[m];
