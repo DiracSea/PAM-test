@@ -457,7 +457,6 @@ int main(int argc, char *argv[])
         v2 = rand_input(m, C);
         return 0;
     }
-    cout << "threads:"<<  num_workers() <<endl;
     tmap m1, m4;
     timer t, t1, t2;
     switch (d)
